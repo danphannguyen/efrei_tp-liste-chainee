@@ -12,6 +12,15 @@ int main(void)
     printf("longueur  : %d\n", liste_longueur(liste));
     printf("contient 30 : %s\n", liste_contient(liste, 30) ? "oui" : "non");
 
+    int max = 0;
+    if (liste_maximum(liste, &max)) {
+        printf("maximum liste  : %d\n", max);
+    }
+
+    if (!liste_maximum(NULL, &max)) {
+        printf("maximum NULL   : aucun (liste vide)\n");
+    }
+
     liste_liberer(liste);
     printf("liberee\n");
 
